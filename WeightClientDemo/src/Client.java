@@ -12,12 +12,20 @@ import java.util.Scanner;
 
  */
 public class Client {
-	
+
 	private ServerSocket serSocket;
-	private ServiceClientHandler client;
 	private static int portNumber = 8000;
+	//private  client;
 	private Scanner scan;
 	private boolean runCheck = true;
 	
+	public Client(String port){
+		
+		portNumber = Integer.parseInt(posrt)
+	}
 	
 }
+
+
+
+
