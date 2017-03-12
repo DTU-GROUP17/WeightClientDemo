@@ -19,6 +19,18 @@ public class Server {
             serverS.getLocalPort());
             System.out.println("wait for a client");
             socket = serverS.accept();
+            //internal buffer is refilled as necessary from the contained input stream
+            dataStream();
+            boolean messageRecieve = false;
+            while (!messageRecieve) {
+                try {
+                    String msg = dataStreamIn.readUTF();
+                    System.out.println("Received: " + msg);
+                    messageRecieve = message.equals("exit") || message.equals("q") || message.equals("quit");
+                } catch (IOException e) {
+                    messageRecieve = true;
+                }
+            }
             
             }
     
