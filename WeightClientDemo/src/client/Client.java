@@ -37,7 +37,11 @@ public class Client {
         }
         terminateConnection();
 	}
-	private void establishConnection(){
+	//Create a DataInputStream that uses the specified underlying InputStream.
+	private void establishConnection() throws IOException{
+		if (socket == null)
+			return;
+	terminal = new DataInputStream(System.in);
 		
 	}
 	private void terminateConnection(){
