@@ -23,7 +23,8 @@ public class Client {
 		} catch (IOException e){
 			e.getStackTrace();
 		}
-		//produce concatenated messages in a language-neutral way
+		/*produce concatenated messages in natural language and flush the data from data 
+		output stram*/
 		String message = "";
         while(!exit(message)) {
             try {
