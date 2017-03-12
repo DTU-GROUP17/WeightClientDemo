@@ -12,9 +12,16 @@ public class Client {
 		System.out.println("Try connect to server");
 		try {
 			socket = new Socket(host, port);
+			//Return the address of the endpoint this socket is bound to.
 			System.out.println("Connected to server:" + socket.getLocalSocketAddress() + 
-					"byport" + socket.getLocalPort());
+					"byport" + socket.getLocalPort());//implementing clients socket.
 		establishConnection();
+		//Thrown to indicate that the IP address of a host could not be determined.
+		} catch (UnknownHostException e){
+			System.out.println("Unknow host"+ e.getMessage());
+		//access to the stack trace.
+		} catch (IOException e){
+			e.getStackTrace();
 		}
 	}
 	private void establishConnection(){
