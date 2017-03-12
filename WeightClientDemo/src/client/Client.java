@@ -44,7 +44,15 @@ public class Client {
 	terminal = new DataInputStream(System.in);
 		
 	}
+	//Close input stream.
 	private void terminateConnection(){
+        try {
+            if (terminal != null) terminal.close();
+            if (dataStreamOut != null) dataStreamOut.close();
+            if (socket != null) socket.close();
+        } catch (IOException e) {
+            e.getStackTrace();
+        }
 		
 	}
 	private boolean exit(){
