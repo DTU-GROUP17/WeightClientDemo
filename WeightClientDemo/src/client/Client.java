@@ -55,7 +55,9 @@ public class Client {
         }
 		
 	}
-	private boolean exit(){
+	private boolean exit(String message){
+		return message.equals("exit") || message.equals("q") || message.equals("quit");
+
 		
 	}
 	
