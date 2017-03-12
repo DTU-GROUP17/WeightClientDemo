@@ -23,10 +23,31 @@ public class Client {
 		} catch (IOException e){
 			e.getStackTrace();
 		}
+		//produce concatenated messages in a language-neutral way
+		String message = "";
+        while(!exit(message)) {
+            try {
+                message = terminal.readLine();
+                dataStreamOut.writeUTF(message);
+                dataStreamOut.flush();
+            } catch (IOException e) {
+                e.getStackTrace();
+            }
+        }
+        terminateConnection();
 	}
 	private void establishConnection(){
 		
 	}
+	private void terminateConnection(){
+		
+	}
+	private boolean exit(){
+		
+	}
+	
+	
+	
 }
 
 
