@@ -6,7 +6,7 @@ public class Main {
 
         switch(args.length) {
         case 1:
-        	//Parses the string argument as a signed decimal integer
+        	//Parse the string argument as a signed decimal integer
         	client.Client client = new client.Client(args[0], Integer.parseInt(args[1]));
             
         case 2:
